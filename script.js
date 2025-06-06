@@ -134,18 +134,12 @@ async function animenewsnetwork({ genre, year, season, recommndationCount, pages
     //const url =  `https://api.jikan.moe/v4/seasons/${year}&season=${season}&page=${pages}`;
     //const url = `https://api.jikan.moe/v4/${genre}/anime?&limit=${recommndationCount}&page=${pages}`;
     const url = `https://api.jikan.moe/v4/seasons/${year}/${season}?limit=25`;
-    //const url = `https://api.jikan.moe/v4/random/anime`
+    
     console.log(url)
     const response = await fetch(url);
     const anime = await response.json();
     console.log(anime.data)
     let arr = []
-    //  anime.data.forEach((element, index) =>{
-    //     if(element.genres[index].mal_id == genre){
-    //     console.log(element.url)
-    //     }
-
-    //  })
 
     arr = anime.data.filter(function (el) {
         for (let i = 0; i < el.genres.length; i++) {
@@ -169,11 +163,7 @@ async function animenewsnetwork({ genre, year, season, recommndationCount, pages
     }
     console.log(arr.length);
 
-    // let randomNum = getRandomNumber(0,arr.length-1).toFixed(0)
-    // console.log(randomNum)
-    // if(recommndationCount>arr.length){
-    //     alert("not enough recommendations in that genre, please choose: "+ arr.length)
-    // }
+   
     console.log(arr)
     let count = 0;
     let countArray = [];
