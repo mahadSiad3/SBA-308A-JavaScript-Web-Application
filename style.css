@@ -3,12 +3,26 @@
     width: 10%;
     margin-inline-start: 10px;
     margin-bottom: 20px;
+
+    
 }
 
 .searchButton {
-    float: right;
-    margin-right: 500px;
-
+     background-color: antiquewhite;
+    border-radius: 15px;
+    
+    font-weight: bold;
+    font-size: 12px;
+    font-family: monospace;
+    color: black;
+    padding: 10px;
+    margin-left: 10px;
+    text-align: center;
+    cursor: pointer;
+    
+}
+.searchButton:hover{
+    background-color: red;
 }
 
 .user-container {
