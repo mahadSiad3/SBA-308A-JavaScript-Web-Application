@@ -1,0 +1,39 @@
+.dropdowns-container select {
+    border: 1px solid black;
+    width: 10%;
+    margin-inline-start: 10px;
+    margin-bottom: 20px;
+}
+
+.searchButton {
+    float: right;
+    margin-right: 500px;
+
+}
+
+.user-container {
+    display: flex;
+    text-align: center;
+    
+}
+
+.recommendedImage {
+    width: auto;
+    height: auto;
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.recommendedName {
+    margin-top: 5px;
+    font-size: 14px;
+    color: black;
+}
+
+.anime-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
