@@ -11,10 +11,10 @@ header.textContent ='Anime Recommendation Generator';
 header.style.fontFamily= 'Papyrus'
 document.body.prepend(header)
 
-// const header2 = document.createElement('h3');
-// header2.textContent ='';
-// header2.style.fontFamily= 'Papyrus'
-// header.parentNode.insertBefore(header2,header.nextSibling)
+const header2 = document.createElement('h3');
+header2.textContent ='If score is green it might be worth it. Otherwise? Maybe something else';
+header2.style.fontFamily= 'papyrus'
+header.parentNode.insertBefore(header2,header.nextSibling)
 
 async function getAnimeSeason() {
 
@@ -124,12 +124,19 @@ async function animenewsnetwork({ genre, year, season, recommndationCount, pages
         return false
     })
 
+    
+
     if (arr.length == 0) {
 
         setTimeout(() => {
-            alert("no anime with that genre in that year and season")
+            alert(arr.length+" anime with that genre in that year and season!! Please choose another genre or season/year")
         }, 1000);
     }
+     if (arr.length>0 && recommndationCount > arr.length) {
+            alert("not enough recommendations in that genre, please choose: " + arr.length)
+            return;
+        }
+
     console.log(arr)
 
     const getRandomNumber = (min, max) => {
@@ -172,10 +179,10 @@ async function animenewsnetwork({ genre, year, season, recommndationCount, pages
 
 
 
-        if (recommndationCount > arr.length) {
-            alert("not enough recommendations in that genre, please choose: " + arr.length)
-            return;
-        }
+        // if (recommndationCount > arr.length) {
+        //     alert("not enough recommendations in that genre, please choose: " + arr.length)
+        //     return;
+        // }
        
 
       
@@ -199,13 +206,14 @@ async function animenewsnetwork({ genre, year, season, recommndationCount, pages
         name.classList.add("recommendedName");
         status.classList.add("Status")
         score.classList.add("Score")
-        if(score.textContent.parseInt() < 7.00){
+        console.log(Number(randomAnime.score))
+        if(Number(randomAnime.score) < 6.50){
         score.style.color='red'
         }
         else{
             score.style.color='green'
         }
-        // Wrap them in a container div
+        
         const animeCard = document.createElement('div');
         animeCard.classList.add("anime-card");
         animeCard.appendChild(userImage);

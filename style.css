@@ -1,3 +1,6 @@
+.body{
+    background-color: white;
+}
 .dropdowns-container select {
     border: 1px solid black;
     width: 10%;
@@ -47,12 +50,14 @@
     display: block;
     margin-top: 20px;
     padding: 10px;
+    border: 2px solid black;
 }
 
 .recommendedName {
     margin-top: 5px;
     font-size: 14px;
     color: black;
+    font-weight: bold;
 }
 
 .anime-card {
