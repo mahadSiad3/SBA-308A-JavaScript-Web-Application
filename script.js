@@ -6,6 +6,16 @@ const yearSelection = document.getElementById('yearSelection')
 const numberOfRecommendations = document.getElementById('numberOfRecommendations')
 const searchButton = document.querySelector('.searchButton')
 
+const header = document.createElement('h1');
+header.textContent ='Anime Recommendation Generator';
+header.style.fontFamily= 'Papyrus'
+document.body.prepend(header)
+
+// const header2 = document.createElement('h3');
+// header2.textContent ='';
+// header2.style.fontFamily= 'Papyrus'
+// header.parentNode.insertBefore(header2,header.nextSibling)
+
 async function getAnimeSeason() {
 
     const genreUrl = 'https://api.jikan.moe/v4/genres/anime';
@@ -189,7 +199,12 @@ async function animenewsnetwork({ genre, year, season, recommndationCount, pages
         name.classList.add("recommendedName");
         status.classList.add("Status")
         score.classList.add("Score")
-
+        if(score.textContent.parseInt() < 7.00){
+        score.style.color='red'
+        }
+        else{
+            score.style.color='green'
+        }
         // Wrap them in a container div
         const animeCard = document.createElement('div');
         animeCard.classList.add("anime-card");
@@ -200,7 +215,7 @@ async function animenewsnetwork({ genre, year, season, recommndationCount, pages
 
         usercontainer.appendChild(animeCard);
 
-        count = randomNum;
+        //count = randomNum;
 
         //console.log("count at bottom: "+ count)
     }

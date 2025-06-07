@@ -11,21 +11,42 @@
 </head>
 
 <body>
- <div class="dropdowns-container">
-  <select id="genreSelection" class="form-select form-select-lg my-1 mx-auto" aria-label="form-select-lg"></select>
-  <select id="seasonSelection" class="form-select form-select-lg my-1 mx-auto" aria-label="form-select-lg"></select>
-  <select id="yearSelection" class="form-select form-select-lg my-1 mx-auto" aria-label="form-select-lg"></select>
-  <select id="numberOfRecommendations" class="form-select form-select-lg my-1 mx-auto" aria-label="form-select-lg"></select>
+    <div class="dropdowns-container">
 
-    <button class="searchButton" type="submit">SEARCH</button>
-</div>
+        <div class="dropdown-group">
+            <label for="genreSelection">Genre</label>
+            <select id="genreSelection" class="form-select form-select-lg my-1 mx-auto"
+                aria-label="form-select-lg"></select>
+        </div>
+
+        <div class="dropdown-group">
+            <label for="seasonSelection">Season</label>
+            <select id="seasonSelection" class="form-select form-select-lg my-1 mx-auto"
+                aria-label="form-select-lg"></select>
+        </div>
+
+        <div class="dropdown-group">
+            <label for="yearSelection">Year</label>
+            <select id="yearSelection" class="form-select form-select-lg my-1 mx-auto"
+                aria-label="form-select-lg"></select>
+        </div>
+
+        <div class="dropdown-group">
+            <label for="numberOfRecommendations">Count</label>
+            <select id="numberOfRecommendations" class="form-select form-select-lg my-1 mx-auto"
+                aria-label="form-select-lg"></select>
+        </div>
+
+        <button class="searchButton" type="submit">SEARCH</button>
+    </div>
+    </div>
     <div class="user-container">
         <!-- <img id="user-image" src="" alt="User Image">
         <p id="user-name">Name: </p>
         <p id="user-debut">debut: </p> -->
     </div>
 
-<div id="animeResults"></div>
+    <div id="animeResults"></div>
 </body>
 
 </html>
