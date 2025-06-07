@@ -124,8 +124,6 @@ async function animenewsnetwork({ genre, year, season, recommndationCount, pages
         return false
     })
 
-    
-
     if (arr.length == 0) {
 
         setTimeout(() => {
