@@ -124,6 +124,7 @@ async function animenewsnetwork({ genre, year, season, recommndationCount, pages
         return false
     })
 
+
     if (arr.length == 0) {
 
         setTimeout(() => {
@@ -174,15 +175,6 @@ async function animenewsnetwork({ genre, year, season, recommndationCount, pages
         console.log(countArray)
 
 
-
-
-
-        // if (recommndationCount > arr.length) {
-        //     alert("not enough recommendations in that genre, please choose: " + arr.length)
-        //     return;
-        // }
-       
-
       
 
         let randomAnime = arr[randomNum]
@@ -227,32 +219,6 @@ async function animenewsnetwork({ genre, year, season, recommndationCount, pages
     }
   
 }
-//animenewsnetwork()
 
-
-
-
-
-
-
-
-//console.log(getSelectedGenreID)
-
-// Random Anime Generator
-// API: Jikan or AniList
-// Description: Show a random anime suggestion with image and synopsis.
-// Features:
-
-// Button to get a random anime
-// Show title, genre, description, and image
-
-
-let arr = [65464, 1000000002, 1000000003]
-
-let sum = 0
-for (let i = 0; i < arr.length; i++) {
-    sum += arr[i]
-    console.log(arr[0] % 10)
-}
 
 
